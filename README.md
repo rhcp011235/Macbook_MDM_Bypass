@@ -62,7 +62,7 @@
 #### LIKE MY WORK? Please donate
 
 Please Donate to me for all these free tools I have been offering
-http://cloud.rhcp011235.me/donate.html
+https://cloud.rhcp011235.me/donate.html
 
 ####
 
