@@ -16,19 +16,8 @@ check_serial_number() {
         echo -e "${RED}Failed to retrieve the serial number.${NC}"
         return 1
     fi
-
-    api_endpoint="https://russkovactivator.com/Panel/api/api.php?serialNumber=$serialNumber"
-    response=$(curl -s "$api_endpoint")
+    
     echo -e "Serial number: ${BLU}$serialNumber${NC}"
-    if [[ "$response" == "AUTHORIZED" ]]; then
-        echo -e "API Response: ${GRN}$response${NC}"
-        echo "Serial number is authorized. Proceeding with bypass process."
-        return 0
-    else
-        echo -e "API Response: ${RED}$response${NC}"
-        echo "Serial number is not authorized. Bypass process cannot proceed."
-        return 0
-    fi
 }
 
 # Function to check hardware information
@@ -88,7 +77,7 @@ remove_configuration_profiles() {
 # Display header
 display_header() {
     echo -e "${GRN}╭──────────────────────────────────────────────╮${NC}"
-    echo -e "${GRN}│              mDm M1-M2-M3 2024               │${NC}"
+    echo -e "${GRN}│        mDm M1-M2-M3 2024                     │${NC}"
     echo -e "${GRN}│      twitter: john011235                     │${NC}"
     echo -e "${GRN}│      Telagram: john011235                    │${NC}"
     echo -e "${GRN}╰──────────────────────────────────────────────╯${NC}"
